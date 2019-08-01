@@ -10,37 +10,50 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let apiURL = "https://api.darksky.net/forecast"
+    let apiKey = "your DarkSky API key here"
+    let coordinates = "50.450875,30.522645"
+    
     private lazy var mainLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.lineBreakMode = .byTruncatingTail
-       
         
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         label.setContentHuggingPriority(.defaultHigh, for: .vertical)
-
+        
         label.font = UIFont(name: "Menlo", size: 50)!
         label.textColor = .white
-        label.text = "test!!!!"
         
         return label
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        setupConstraints()
+        fetchInfo()
     }
     
     private func setupUI() {
         view.addSubview(mainLabel)
-    }
-    
-    private func setupConstraints() {
+        
         mainLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         mainLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    private func fetchInfo() {
+        let session = URLSession(configuration:.default)
+        let task: URLSessionTask = session.dataTask(with: URLRequest(url: buildURL())) { (dataOrNil, responseOrNil, errorOrNil) in
+            print("completed")
+            //TODO: parse and display
+        }
+        task.resume()
+    }
+    
+    private func buildURL() -> URL {
+        return URL(string: "\(apiURL)/\(apiKey)/\(coordinates)")!
     }
 }
 
