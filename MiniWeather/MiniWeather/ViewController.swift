@@ -46,8 +46,16 @@ class ViewController: UIViewController {
     private func fetchInfo() {
         let session = URLSession(configuration:.default)
         let task: URLSessionTask = session.dataTask(with: URLRequest(url: buildURL())) { (dataOrNil, responseOrNil, errorOrNil) in
-            print("completed")
-            //TODO: parse and display
+            if let path = Bundle.main.path(forResource: "testData", ofType: "json") {
+                do {
+                    let fileUrl = URL(fileURLWithPath: path)
+                    let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
+                    let jsonString = String(data: data, encoding: .utf8)!
+                    print(jsonString)
+                } catch {
+                    print("failed to load data")
+                }
+            }
         }
         task.resume()
     }

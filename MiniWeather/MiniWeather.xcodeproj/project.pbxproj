@@ -22,6 +22,8 @@
 		022CCFAE22F394C100AFC8A7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAD22F394C100AFC8A7 /* ExtensionDelegate.swift */; };
 		022CCFB022F394C100AFC8A7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAF22F394C100AFC8A7 /* NotificationController.swift */; };
 		022CCFB222F394C100AFC8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022CCFB122F394C100AFC8A7 /* Assets.xcassets */; };
+		023CD0BB22F46549006F703F /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 023CD0BA22F46549006F703F /* testData.json */; };
+		023CD0BC22F46549006F703F /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 023CD0BA22F46549006F703F /* testData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,7 @@
 		022CCFB122F394C100AFC8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022CCFB322F394C100AFC8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022CCFB422F394C100AFC8A7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		023CD0BA22F46549006F703F /* testData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 		022CCF7122F394BF00AFC8A7 /* MiniWeather */ = {
 			isa = PBXGroup;
 			children = (
+				023CD0B922F46523006F703F /* Resources */,
 				022CCF7222F394BF00AFC8A7 /* AppDelegate.swift */,
 				022CCF7422F394BF00AFC8A7 /* ViewController.swift */,
 				022CCF7622F394BF00AFC8A7 /* Main.storyboard */,
@@ -215,6 +219,14 @@
 				022CCFB422F394C100AFC8A7 /* PushNotificationPayload.apns */,
 			);
 			path = "MiniWeather WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		023CD0B922F46523006F703F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				023CD0BA22F46549006F703F /* testData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +380,7 @@
 				022CCF7D22F394C000AFC8A7 /* LaunchScreen.storyboard in Resources */,
 				022CCF7A22F394C000AFC8A7 /* Assets.xcassets in Resources */,
 				022CCF7822F394BF00AFC8A7 /* Main.storyboard in Resources */,
+				023CD0BB22F46549006F703F /* testData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023CD0BC22F46549006F703F /* testData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
