@@ -25,6 +25,9 @@
 		022CCFB222F394C100AFC8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022CCFB122F394C100AFC8A7 /* Assets.xcassets */; };
 		023CD0BB22F46549006F703F /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 023CD0BA22F46549006F703F /* testData.json */; };
 		023CD0BC22F46549006F703F /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = 023CD0BA22F46549006F703F /* testData.json */; };
+		02434EF222F4E0D600B3B363 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02434EF122F4E0D600B3B363 /* NetworkingService.swift */; };
+		02434EF422F4E15000B3B363 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02434EF322F4E15000B3B363 /* RequestBuilder.swift */; };
+		02434EF622F4E18300B3B363 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02434EF522F4E18300B3B363 /* Configuration.swift */; };
 		028A371E22F495E600F5113F /* currentTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 028A371D22F495E600F5113F /* currentTestData.json */; };
 		028A371F22F495E600F5113F /* currentTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 028A371D22F495E600F5113F /* currentTestData.json */; };
 		028A372222F4979400F5113F /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A372122F4979400F5113F /* WeatherInfo.swift */; };
@@ -117,6 +120,9 @@
 		022CCFB322F394C100AFC8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		022CCFB422F394C100AFC8A7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		023CD0BA22F46549006F703F /* testData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
+		02434EF122F4E0D600B3B363 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		02434EF322F4E15000B3B363 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		02434EF522F4E18300B3B363 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		028A371D22F495E600F5113F /* currentTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currentTestData.json; sourceTree = "<group>"; };
 		028A372122F4979400F5113F /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		028A372322F4985200F5113F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 		022CCF7122F394BF00AFC8A7 /* MiniWeather */ = {
 			isa = PBXGroup;
 			children = (
+				02434EF022F4E0B100B3B363 /* Data Access */,
 				028A372022F4977B00F5113F /* Model */,
 				023CD0B922F46523006F703F /* Resources */,
 				022CCF7222F394BF00AFC8A7 /* AppDelegate.swift */,
@@ -270,6 +277,16 @@
 				023CD0BA22F46549006F703F /* testData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		02434EF022F4E0B100B3B363 /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				02434EF122F4E0D600B3B363 /* NetworkingService.swift */,
+				02434EF322F4E15000B3B363 /* RequestBuilder.swift */,
+				02434EF522F4E18300B3B363 /* Configuration.swift */,
+			);
+			path = "Data Access";
 			sourceTree = "<group>";
 		};
 		028A372022F4977B00F5113F /* Model */ = {
@@ -663,8 +680,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02434EF222F4E0D600B3B363 /* NetworkingService.swift in Sources */,
 				028A372422F4985200F5113F /* Forecast.swift in Sources */,
+				02434EF622F4E18300B3B363 /* Configuration.swift in Sources */,
 				022CCF7522F394BF00AFC8A7 /* ViewController.swift in Sources */,
+				02434EF422F4E15000B3B363 /* RequestBuilder.swift in Sources */,
 				028A372222F4979400F5113F /* WeatherInfo.swift in Sources */,
 				022CCF7322F394BF00AFC8A7 /* AppDelegate.swift in Sources */,
 			);
