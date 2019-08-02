@@ -44,8 +44,8 @@ class ViewController: UIViewController {
     }
     
     private func fetchInfo() {
-        let session = URLSession(configuration:.default)
-        let task: URLSessionTask = session.dataTask(with: URLRequest(url: buildURL())) { (dataOrNil, responseOrNil, errorOrNil) in
+        let session = URLSession(configuration: .default)
+        let task: URLSessionTask = session.dataTask(with: URLRequest(url: buildURL())) { (_, _, _) in
             if let path = Bundle.main.path(forResource: "testData", ofType: "json") {
                 do {
                     let fileUrl = URL(fileURLWithPath: path)
@@ -64,4 +64,3 @@ class ViewController: UIViewController {
         return URL(string: "\(apiURL)/\(apiKey)/\(coordinates)")!
     }
 }
-

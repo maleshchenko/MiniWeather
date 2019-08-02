@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+target 'MiniWeather' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MiniWeather
+
+  target 'MiniWeatherTests' do
+
+    pod 'SwiftLint'
+
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MiniWeatherUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'MiniWeather WatchKit App' do
+  platform :watchos, '5.0'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MiniWeather WatchKit App
+
+end
+
+target 'MiniWeather WatchKit Extension' do
+  platform :watchos, '5.0'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MiniWeather WatchKit Extension
+
+end
