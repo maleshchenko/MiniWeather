@@ -1,0 +1,27 @@
+{
+  "latitude": 50.450875,
+  "longitude": 30.522645,
+  "timezone": "Europe/Kiev",
+  "currently": {
+    "time": 1564760663,
+    "summary": "Partly Cloudy",
+    "icon": "partly-cloudy-day",
+    "nearestStormDistance": 0,
+    "precipIntensity": 0.0154,
+    "precipProbability": 0.2,
+    "precipType": "rain",
+    "temperature": 67.75,
+    "apparentTemperature": 67.75,
+    "dewPoint": 56.49,
+    "humidity": 0.67,
+    "pressure": 1009.31,
+    "windSpeed": 8.75,
+    "windGust": 32.57,
+    "windBearing": 333,
+    "cloudCover": 0.37,
+    "uvIndex": 1,
+    "visibility": 7.929,
+    "ozone": 335.1
+  },
+  "offset": 3
+}

@@ -22,5 +22,12 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+MiniWeather/.DS_Store
+MiniWeather/Pods*
+MiniWeather/MiniWeather.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+MiniWeather/MiniWeather.xcworkspace/contents.xcworkspacedata
+MiniWeather/MiniWeather.xcodeproj/project.xcworkspace/xcuserdata*
+MiniWeather/MiniWeather.xcodeproj/xcuserdata*
+
 ## Gcc Patch
 /*.gcno
