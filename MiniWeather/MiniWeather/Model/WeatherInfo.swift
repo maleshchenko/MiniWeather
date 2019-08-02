@@ -6,8 +6,6 @@
 //  Copyright © 2019 Mykola Aleschenko. All rights reserved.
 //
 
-import Foundation
-
 struct WeatherInfo: Decodable {
-    let currentForecast: Forecast
+    let currently: Forecast
 }

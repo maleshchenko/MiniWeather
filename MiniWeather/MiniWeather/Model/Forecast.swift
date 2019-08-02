@@ -6,4 +6,10 @@
 //  Copyright © 2019 Mykola Aleschenko. All rights reserved.
 //
 
-import Foundation
+struct Forecast: Decodable {
+    let temperature: Double
+
+    func celsius() -> Double {
+        return (temperature - 32) * 0.5
+    }
+}
