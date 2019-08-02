@@ -7,19 +7,19 @@
 //
 
 import Foundation
+import os.log
 
 struct NetworkingService {
     
     func fetchInfo(completion: @escaping (WeatherInfo) -> Void) {
         let session = URLSession(configuration: .default)
-        let task: URLSessionTask = session.dataTask(with: URLRequest(url: RequestBuilder.buildURL())) { (dataOrNil, _, _) in
+        let task: URLSessionTask = session.dataTask(with: URLRequest(url: RequestBuilder.buildURL())) { (dataOrNil, _, error) in
             guard let data = dataOrNil else { return }
             do {
                 let forecast = try JSONDecoder().decode(WeatherInfo.self, from: data)
-                completion(forecast as WeatherInfo)
-                
+                completion(forecast)
             } catch {
-                
+                os_log("Got error %@ when trying to parse info", log: Logging().networkingLog, type: .error, error.localizedDescription)
             }
         }
         
@@ -31,14 +31,10 @@ struct NetworkingService {
             do {
                 let fileUrl = URL(fileURLWithPath: path)
                 let data = try Data(contentsOf: fileUrl, options: .mappedIfSafe)
-                do {
-                    let forecast = try JSONDecoder().decode(WeatherInfo.self, from: data)
-                    completion(forecast as WeatherInfo)
-                } catch {
-                    
-                }
+                let forecast = try JSONDecoder().decode(WeatherInfo.self, from: data)
+                completion(forecast)
             } catch {
-                print("failed to load data")
+                os_log("Got error %@ when trying to load local file", log: Logging().persistencegLog, type: .error, error.localizedDescription)
             }
         }
     }
