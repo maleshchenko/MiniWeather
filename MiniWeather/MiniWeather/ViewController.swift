@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        //fetchInfo()
-        fetchTestInfo()
+        fetchInfo()
+        //fetchTestInfo()
     }
     
     private func setupUI() {
@@ -53,6 +53,8 @@ class ViewController: UIViewController {
     }
 
     private func displayInfo(_ info: WeatherInfo) {
-        mainLabel.text = Personalization().mode(for: Int(info.currently.celsius()))
+        DispatchQueue.main.async { [weak self] in
+            self?.mainLabel.text = Personalization().mode(for: Int(info.currently.celsius()))
+        }
     }
 }

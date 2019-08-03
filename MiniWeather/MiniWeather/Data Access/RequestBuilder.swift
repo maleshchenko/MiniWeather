@@ -11,11 +11,14 @@ import Foundation
 struct RequestBuilder {
 
     static func buildURL() -> URL {
-        let url = URL(string: Configuration.apiURL)?
-            .appendingPathComponent(Configuration.apiKey)
-            .appendingPathComponent(Configuration.coordinates)
-            .appendingPathComponent(Configuration.defaultParameters)
+        var components = URLComponents()
+        components.scheme = Configuration.scheme
+        components.host = Configuration.apiURL
+        components.path = Configuration.path + Configuration.apiKey + Configuration.coordinates
+        components.queryItems = [
+            URLQueryItem(name: Configuration.excludeParams, value: Configuration.excludeParamsValue)
+        ]
 
-        return url!
+        return components.url!
     }
 }
