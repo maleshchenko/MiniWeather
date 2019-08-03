@@ -53,6 +53,6 @@ class ViewController: UIViewController {
     }
 
     private func displayInfo(_ info: WeatherInfo) {
-        mainLabel.text = String(info.currently.celsius())
+        mainLabel.text = Personalization().mode(for: Int(info.currently.celsius()))
     }
 }
