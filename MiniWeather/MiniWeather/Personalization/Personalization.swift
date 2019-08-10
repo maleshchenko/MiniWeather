@@ -40,7 +40,12 @@ struct Personalization {
         if Months.winter.contains(currentMonth) {
             return Ranges.winterColdRange.contains(temparature) ? Mode.tooCold : Mode.perfect
         } else if Months.summer.contains(currentMonth) {
-            return Ranges.hotRange.contains(temparature) ? Mode.tooHot : Mode.perfect
+            if Ranges.hotRange.contains(temparature) {
+                return Mode.tooHot
+            } else if Ranges.otherColdRange.contains(temparature) {
+                return Mode.tooCold
+            }
+            return Mode.perfect
         }
         
         return Ranges.otherColdRange.contains(temparature) ? Mode.tooCold : Mode.perfect
