@@ -16,7 +16,6 @@ class MiniWeatherTests: XCTestCase {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                print(jsonResult)
                 if let jsonResult = jsonResult as? [String: AnyObject], let currently = jsonResult["currently"] as? Double {
                     let forecast = Forecast(temperature: currently)
                     let weatherInfo = WeatherInfo(currently: forecast)
