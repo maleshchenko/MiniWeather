@@ -69,7 +69,9 @@ class ViewController: UIViewController {
 
     private func displayInfo(_ info: WeatherInfo) {
         DispatchQueue.main.async { [weak self] in
-            self?.mainLabel.text = Personalization().mode(for: Int(info.currently.celsius()))
+            let string = Personalization().mode(for: Int(info.currently.celsius()))
+            PersistenceManager().save(string)
+            self?.mainLabel.text = string
         }
     }
     

@@ -19,7 +19,6 @@
 		022CCF9E22F394C000AFC8A7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022CCF9C22F394C000AFC8A7 /* Interface.storyboard */; };
 		022CCFA022F394C100AFC8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022CCF9F22F394C100AFC8A7 /* Assets.xcassets */; };
 		022CCFA722F394C100AFC8A7 /* MiniWeather WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 022CCFA622F394C100AFC8A7 /* MiniWeather WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		022CCFAC22F394C100AFC8A7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAB22F394C100AFC8A7 /* InterfaceController.swift */; };
 		022CCFAE22F394C100AFC8A7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAD22F394C100AFC8A7 /* ExtensionDelegate.swift */; };
 		022CCFB022F394C100AFC8A7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAF22F394C100AFC8A7 /* NotificationController.swift */; };
 		022CCFB222F394C100AFC8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022CCFB122F394C100AFC8A7 /* Assets.xcassets */; };
@@ -35,6 +34,10 @@
 		028A371F22F495E600F5113F /* currentTestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 028A371D22F495E600F5113F /* currentTestData.json */; };
 		028A372222F4979400F5113F /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A372122F4979400F5113F /* WeatherInfo.swift */; };
 		028A372422F4985200F5113F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A372322F4985200F5113F /* Forecast.swift */; };
+		02DEB8CE236633D40049B200 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DEB8CD236633D40049B200 /* Constants.swift */; };
+		02DEB8CF236633F60049B200 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CCFAB22F394C100AFC8A7 /* InterfaceController.swift */; };
+		02DEB8D0236634050049B200 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DEB8CD236633D40049B200 /* Constants.swift */; };
+		02EC48C723662343006B30A0 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC48C623662343006B30A0 /* PersistenceManager.swift */; };
 		311F569BF76FF776AEA4A898 /* Pods_MiniWeather_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80371E213AFF6669F22BD338 /* Pods_MiniWeather_WatchKit_App.framework */; };
 		43F8CD0DEA80D5F6614D83AE /* Pods_MiniWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D572AC3DAD03E8E1327C042B /* Pods_MiniWeather.framework */; };
 		D31BED8390BCAE3E6DE16EAC /* Pods_MiniWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A402804C6A55B5F14E5728 /* Pods_MiniWeatherTests.framework */; };
@@ -132,6 +135,8 @@
 		028A371D22F495E600F5113F /* currentTestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currentTestData.json; sourceTree = "<group>"; };
 		028A372122F4979400F5113F /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		028A372322F4985200F5113F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		02DEB8CD236633D40049B200 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		02EC48C623662343006B30A0 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		030541D34C321B5E970F38BC /* Pods-MiniWeather WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniWeather WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-MiniWeather WatchKit App/Pods-MiniWeather WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		28A8550DA15A7F60138519CC /* Pods-MiniWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniWeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniWeatherTests/Pods-MiniWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D21F26B0DC882F9863B4954 /* Pods-MiniWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniWeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniWeatherUITests/Pods-MiniWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				02434EF122F4E0D600B3B363 /* NetworkingService.swift */,
+				02DEB8CD236633D40049B200 /* Constants.swift */,
+				02EC48C623662343006B30A0 /* PersistenceManager.swift */,
 				02434EF322F4E15000B3B363 /* RequestBuilder.swift */,
 				02434EF522F4E18300B3B363 /* Configuration.swift */,
 			);
@@ -475,6 +482,7 @@
 					};
 					022CCF9622F394C000AFC8A7 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1100;
 					};
 					022CCFA522F394C100AFC8A7 = {
 						CreatedOnToolsVersion = 10.3;
@@ -714,7 +722,9 @@
 				02434EFD22F4EF6900B3B363 /* Personalization.swift in Sources */,
 				028A372222F4979400F5113F /* WeatherInfo.swift in Sources */,
 				022CCF7322F394BF00AFC8A7 /* AppDelegate.swift in Sources */,
+				02EC48C723662343006B30A0 /* PersistenceManager.swift in Sources */,
 				02434EFA22F4E8EF00B3B363 /* Logging.swift in Sources */,
+				02DEB8CE236633D40049B200 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,9 +748,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DEB8CF236633F60049B200 /* InterfaceController.swift in Sources */,
 				022CCFB022F394C100AFC8A7 /* NotificationController.swift in Sources */,
 				022CCFAE22F394C100AFC8A7 /* ExtensionDelegate.swift in Sources */,
-				022CCFAC22F394C100AFC8A7 /* InterfaceController.swift in Sources */,
+				02DEB8D0236634050049B200 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,14 +976,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93E496X497;
 				IBSC_MODULE = MiniWeather_WatchKit_Extension;
 				INFOPLIST_FILE = "MiniWeather WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = minimalist.MiniWeather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.3;
@@ -985,10 +1003,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93E496X497;
 				IBSC_MODULE = MiniWeather_WatchKit_Extension;
 				INFOPLIST_FILE = "MiniWeather WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = minimalist.MiniWeather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
