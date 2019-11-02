@@ -13,23 +13,24 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var label: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)        
-    }
-    
-    override func willActivate() {
-        super.willActivate()
-        
+        super.awake(withContext: context)
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
             session.activate()
-            session.sendMessage([Constants.requestKey: Constants.requestValue], replyHandler: nil)
         }
+    }
+    
+    override func willActivate() {
+        super.willActivate()
     }
 }
 
-extension InterfaceController: WCSessionDelegate {    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
+extension InterfaceController: WCSessionDelegate {        
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        let message = [Constants.requestKey: Constants.requestValue]
+        session.sendMessage(message, replyHandler: nil)
+    }
     
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
         guard let text = message[Constants.receivedTextKey] as? String else { return }
